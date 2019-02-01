@@ -29,8 +29,11 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
+#ifdef WIN32
+#include <OgreLogManager.h>
+#else
 #include <OGRE/OgreLogManager.h>
+#endif
 
 #include <QCloseEvent>
 #include <QFileDialog>

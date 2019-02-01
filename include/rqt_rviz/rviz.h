@@ -35,7 +35,11 @@
 
 #include <rqt_gui_cpp/plugin.h>
 #include <rviz/visualization_frame.h>
+#ifdef WIN32
+#include <OgreLog.h>
+#else
 #include <OGRE/OgreLog.h>
+#endif
 
 #include <QDockWidget>
 #include <QMenuBar>
