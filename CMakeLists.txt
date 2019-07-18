@@ -53,6 +53,9 @@ install(TARGETS ${PROJECT_NAME}
 install(PROGRAMS scripts/rqt_rviz
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+if(WIN32)
+  install_python_cli(rqt_rviz)
+endif()
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
